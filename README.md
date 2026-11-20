@@ -13,7 +13,7 @@ The platform allows users to investigate the behaviour of coherent light waves, 
 ## Preview
 
 <img width="1900" height="827" alt="image" src="https://github.com/user-attachments/assets/b92214e4-7b00-4e8e-836d-439a47643b41" />
-
+**Live demo:** [interfero.vercel.app](https://interfero.vercel.app/)
 
 *The INTERFERO interactive wave optics laboratory.*
 
