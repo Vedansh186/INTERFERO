@@ -96,9 +96,9 @@ The simulation is based on the mathematical principles of Young's Double-Slit Ex
 
 For small angular deviations, the fringe width is given by:
 
-\[
+$$
 \boxed{\beta = \frac{\lambda D}{d}}
-\]
+$$
 
 Where:
 
@@ -111,43 +111,43 @@ Where:
 
 The path difference between waves arriving at a point on the screen is:
 
-\[
+$$
 \Delta = d\sin\theta
-\]
+$$
 
 The angular position is calculated using:
 
-\[
+$$
 \theta = \tan^{-1}\left(\frac{y}{D}\right)
-\]
+$$
 
 ### Phase Difference
 
 The phase difference between the interfering waves is:
 
-\[
+$$
 \phi = \frac{2\pi\Delta}{\lambda}
-\]
+$$
 
 ### Intensity Distribution
 
 The simulation uses the combined interference and single-slit diffraction intensity model:
 
-\[
+$$
 \frac{I}{I_0} =
 \left(\frac{\sin\alpha}{\alpha}\right)^2
 \cos^2\delta
-\]
+$$
 
 Where:
 
-\[
+$$
 \alpha = \frac{\pi a\sin\theta}{\lambda}
-\]
+$$
 
-\[
+$$
 \delta = \frac{\pi d\sin\theta}{\lambda}
-\]
+$$
 
 This allows the simulation to represent the diffraction envelope alongside the interference fringes.
 
