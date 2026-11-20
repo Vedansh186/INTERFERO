@@ -1,0 +1,906 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono&family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+/* =========================================
+   INTERFERO — ROSE EDITION
+   ========================================= */
+
+:root {
+  font-family: 'Manrope', Arial, sans-serif;
+  color: #eaf0f7;
+  background: #070b16;
+
+  --bg: #070b16;
+  --surface: #0d1423;
+  --surface-light: #111a2c;
+
+  --text: #eaf0f7;
+  --text-muted: #aebbd0;
+
+  --rose: #e9a1c0;
+  --rose-light: #f4c6d9;
+  --rose-deep: #c66b99;
+  --rose-muted: #ad7794;
+  --rose-dark: #79516a;
+
+  --border: #283044;
+  --border-rose: #543449;
+
+  --accent: var(--rose);
+  --accent-bg: #241927;
+  --accent-border: var(--rose-deep);
+
+  --glow: rgba(233, 161, 192, 0.16);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(
+      ellipse at 72% 0%,
+      #211629 0%,
+      #101426 32%,
+      #070b16 72%,
+      #050810 100%
+    );
+}
+
+main {
+  max-width: 1440px;
+  margin: auto;
+  overflow: hidden;
+}
+
+/* =========================================
+   TYPOGRAPHY
+   ========================================= */
+
+h1,
+h2,
+h3 {
+  font-family: 'Manrope', sans-serif;
+  color: var(--text);
+}
+
+h1,
+h2 {
+  font-weight: 800;
+}
+
+h2 {
+  letter-spacing: -0.055em;
+}
+
+p {
+  font-family: 'Manrope', sans-serif;
+}
+
+.eyebrow {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  color: var(--rose);
+  margin: 0 0 14px;
+}
+
+/* =========================================
+   NAVIGATION
+   ========================================= */
+
+nav {
+  height: 76px;
+  border-bottom: 1px solid var(--border);
+
+  display: flex;
+  align-items: center;
+  padding: 0 5%;
+  gap: 27px;
+
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.13em;
+  color: #a6a9bd;
+}
+
+.brand {
+  color: #eef4fb;
+  font-size: 15px;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+}
+
+.brand i {
+  color: var(--rose);
+  font-style: normal;
+}
+
+nav div {
+  margin-left: auto;
+  display: flex;
+  gap: 24px;
+}
+
+nav a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: var(--rose-light);
+}
+
+/* =========================================
+   HERO SECTION
+   ========================================= */
+
+.hero {
+  padding: 112px 10% 115px;
+  min-height: 580px;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: clamp(48px, 7vw, 92px);
+  letter-spacing: -0.07em;
+  line-height: 0.9;
+  margin: 0 0 24px;
+}
+
+.hero em {
+  font-family: 'Instrument Serif', serif;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--rose-light);
+}
+
+.lede {
+  max-width: 430px;
+  color: #b0bfd1;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+.hero-orbits {
+  position: absolute;
+  right: 7%;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  border: 1px solid var(--border-rose);
+  opacity: 0.75;
+}
+
+.hero-orbits span {
+  position: absolute;
+  border: 1px solid var(--rose-dark);
+  border-radius: 50%;
+  inset: 12%;
+}
+
+.hero-orbits span:nth-child(2) {
+  inset: 26%;
+}
+
+.hero-orbits span:nth-child(3) {
+  inset: 39%;
+}
+
+.hero-orbits span:nth-child(4) {
+  inset: 2%;
+  border-color: #352438;
+}
+
+.hero-orbits div {
+  position: absolute;
+  left: 48%;
+  top: 46%;
+  font: 42px 'Instrument Serif', serif;
+  color: var(--rose-light);
+}
+
+/* =========================================
+   BUTTONS
+   ========================================= */
+
+.button {
+  display: inline-flex;
+  gap: 27px;
+
+  background: var(--rose-light);
+  color: #17101a;
+
+  text-decoration: none;
+  padding: 15px 20px;
+  margin-top: 20px;
+
+  border: 0;
+  border-radius: 2px;
+
+  font-weight: 700;
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.button:hover {
+  background: var(--rose);
+  box-shadow: 0 0 25px var(--glow);
+}
+
+/* =========================================
+   LABORATORY
+   ========================================= */
+
+.lab {
+  padding: 44px 5% 70px;
+  background: #0b1020;
+  border-top: 1px solid #272337;
+}
+
+.lab header,
+.card-head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+
+.lab h2,
+.presets h2,
+.observations h2,
+.theory h2,
+.report h2 {
+  font-size: 35px;
+  letter-spacing: -0.055em;
+  margin: 0;
+}
+
+.status {
+  font: 10px 'DM Mono', monospace;
+  letter-spacing: 0.13em;
+  color: #a7bad0;
+}
+
+.status i {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  margin-right: 7px;
+}
+
+/* =========================================
+   EXPERIMENTAL CONTROLS
+   ========================================= */
+
+.lab-grid {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.controls {
+  padding: 23px;
+  border-right: 1px solid var(--border);
+}
+
+.controls h3,
+.analysis h3 {
+  margin: 0 0 25px;
+  font-size: 14px;
+}
+
+.range {
+  display: block;
+  margin: 20px 0;
+}
+
+.range span {
+  font-size: 11px;
+  color: #c6d2e1;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.range output {
+  font-family: 'DM Mono', monospace;
+  color: var(--rose);
+}
+
+input[type="range"] {
+  width: 100%;
+  accent-color: var(--rose);
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.mode {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 27px 0 18px;
+}
+
+.mode span {
+  width: 100%;
+  font-size: 11px;
+  color: #c6d2e1;
+}
+
+.mode button,
+.control-row button,
+.table-card button {
+  background: #171629;
+  color: #d2b8c9;
+
+  border: 1px solid #443047;
+  padding: 8px;
+
+  font-size: 10px;
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.mode button:hover,
+.control-row button:hover {
+  border-color: var(--rose);
+  color: var(--rose-light);
+}
+
+.mode .active {
+  background: var(--rose-light);
+  color: #17101a;
+  border-color: var(--rose-light);
+}
+
+.toggles {
+  border-top: 1px solid var(--border);
+  padding: 13px 0;
+
+  display: grid;
+  gap: 8px;
+
+  font-size: 11px;
+  color: #c5b6c5;
+}
+
+.toggles input {
+  accent-color: var(--rose);
+}
+
+.control-row {
+  display: flex;
+  gap: 8px;
+}
+
+.control-row button {
+  flex: 1;
+}
+
+/* =========================================
+   SIMULATION CANVAS
+   ========================================= */
+
+.experiment {
+  display: block;
+  width: 100%;
+  height: 355px;
+  touch-action: none;
+}
+
+.hint {
+  text-align: center;
+  color: #9b8398;
+  font-size: 10px;
+  margin: 7px;
+}
+
+.readout {
+  border-top: 1px solid var(--border);
+  display: flex;
+  padding: 14px 18px;
+  justify-content: space-between;
+
+  color: #a18da2;
+  font: 10px 'DM Mono', monospace;
+}
+
+.readout b {
+  color: var(--rose-light);
+  margin-left: 6px;
+}
+
+/* =========================================
+   ANALYSIS AND GRAPHS
+   ========================================= */
+
+.analysis {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  margin-top: 18px;
+  gap: 18px;
+}
+
+.analysis article,
+.table-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 20px;
+}
+
+.card-head span {
+  font: 11px 'DM Mono', monospace;
+  color: #b393aa;
+}
+
+.graph {
+  width: 100%;
+  height: 210px;
+  display: block;
+}
+
+.caption {
+  font-size: 10px;
+  color: #a18fa5;
+}
+
+.caption i {
+  display: inline-block;
+  width: 20px;
+  border-top: 2px solid var(--rose-light);
+  margin-right: 7px;
+}
+
+.caption .dash {
+  border-top-style: dashed;
+  border-color: #b08aa7;
+  margin-left: 17px;
+}
+
+/* =========================================
+   MEASUREMENT PANEL
+   ========================================= */
+
+.measurement h3 {
+  font: 28px 'DM Mono', monospace;
+  color: var(--rose-light);
+  margin-bottom: 18px;
+}
+
+.measurement h3 span {
+  font: 10px 'Manrope', sans-serif;
+  color: #b092a7;
+}
+
+.measurement dl {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin: 0;
+}
+
+.measurement dt {
+  font-size: 10px;
+  color: #a18da2;
+}
+
+.measurement dd {
+  font: 11px 'DM Mono', monospace;
+  margin: 4px 0 0;
+  color: #e4d7e5;
+}
+
+.measurement .bright {
+  color: var(--rose-light);
+}
+
+.measurement .dark {
+  color: #b08da8;
+}
+
+.record {
+  background: var(--rose-light);
+  border: 0;
+  padding: 10px;
+  width: 100%;
+  margin-top: 22px;
+
+  color: #17101a;
+  font-weight: 700;
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.record:hover {
+  background: var(--rose);
+  box-shadow: 0 0 20px var(--glow);
+}
+
+/* =========================================
+   EXPERIMENT PRESETS
+   ========================================= */
+
+.presets,
+.observations,
+.theory,
+.report {
+  padding: 95px 10%;
+  border-top: 1px solid #272337;
+}
+
+.presets > div {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.presets button {
+  position: relative;
+  text-align: left;
+  padding: 20px;
+
+  background: #0e1424;
+  color: #e4dbea;
+
+  border: 1px solid var(--border);
+  cursor: pointer;
+  min-height: 105px;
+
+  transition: all 0.25s ease;
+}
+
+.presets button:hover {
+  border-color: var(--rose);
+  background: #181424;
+  box-shadow: 0 0 18px var(--glow);
+}
+
+.presets b,
+.presets span {
+  display: block;
+}
+
+.presets span {
+  font-size: 11px;
+  color: #b4a3b7;
+  line-height: 1.5;
+  margin-top: 9px;
+}
+
+.presets i {
+  position: absolute;
+  top: 17px;
+  right: 17px;
+  color: var(--rose);
+}
+
+/* =========================================
+   OBSERVATIONS
+   ========================================= */
+
+.observations {
+  background: #0b1020;
+
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 70px;
+}
+
+.observations > div > p:not(.eyebrow),
+.report p {
+  color: #b0a5ba;
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.table-card {
+  min-height: 180px;
+}
+
+.table-card table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11px;
+}
+
+.table-card th,
+.table-card td {
+  text-align: left;
+  padding: 9px;
+  border-bottom: 1px solid var(--border);
+}
+
+.table-card th {
+  color: var(--rose);
+}
+
+.table-card button {
+  margin-top: 15px;
+}
+
+.table-card button:not(:disabled):hover {
+  border-color: var(--rose);
+  color: var(--rose-light);
+}
+
+.table-card button:disabled {
+  opacity: 0.4;
+}
+
+.empty {
+  color: #a08da4;
+  font-size: 12px;
+}
+
+/* =========================================
+   THEORY SECTION
+   ========================================= */
+
+.theory {
+  background: linear-gradient(
+    120deg,
+    #070b16,
+    #151024
+  );
+}
+
+.theory-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin: 37px 0;
+}
+
+.theory-grid article {
+  border-top: 1px solid var(--rose-dark);
+  padding-top: 14px;
+}
+
+.theory-grid b {
+  font: 10px 'DM Mono', monospace;
+  color: var(--rose);
+}
+
+.theory-grid p,
+.equation p {
+  font-size: 13px;
+  line-height: 1.7;
+  color: #b6aabd;
+}
+
+.equation {
+  background: #111425;
+  padding: 25px;
+  border-left: 2px solid var(--rose);
+}
+
+.equation span {
+  font: 10px 'DM Mono', monospace;
+  color: var(--rose);
+}
+
+.equation strong {
+  display: block;
+  font: 40px 'Instrument Serif', serif;
+  color: var(--rose-light);
+  margin: 8px 0;
+}
+
+/* =========================================
+   REPORT / PBL HANDOFF
+   ========================================= */
+
+.report {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: #f0d8e5;
+  color: #17101a;
+}
+
+.report h2 {
+  color: #211522;
+}
+
+.report .eyebrow {
+  color: #88516e;
+}
+
+.report p {
+  color: #62465c;
+  max-width: 530px;
+}
+
+.report .button {
+  margin: 0;
+  background: #342033;
+  color: #f8eaf2;
+}
+
+.report .button:hover {
+  background: #56334f;
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer {
+  padding: 32px 5%;
+  font-size: 10px;
+  color: #a18da4;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+
+  background: #060810;
+}
+
+footer b {
+  color: #f2e4ed;
+  letter-spacing: 0.12em;
+}
+
+/* =========================================
+   HOVER AND FOCUS
+   ========================================= */
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--rose);
+  outline-offset: 3px;
+}
+
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+
+@media (max-width: 780px) {
+
+  nav span,
+  nav div {
+    display: none;
+  }
+
+  .hero {
+    padding: 80px 8%;
+    min-height: 530px;
+  }
+
+  .hero-orbits {
+    width: 250px;
+    height: 250px;
+    right: -40px;
+    bottom: 30px;
+    opacity: 0.4;
+  }
+
+  .lab {
+    padding: 38px 4%;
+  }
+
+  .lab-grid,
+  .analysis,
+  .observations {
+    grid-template-columns: 1fr;
+  }
+
+  .controls {
+    border-right: 0;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .experiment {
+    height: 290px;
+  }
+
+  .presets,
+  .observations,
+  .theory,
+  .report {
+    padding: 65px 7%;
+  }
+
+  .presets > div,
+  .theory-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .report {
+    display: block;
+  }
+
+  footer {
+    display: block;
+  }
+
+  footer span {
+    display: block;
+    margin-top: 12px;
+  }
+}
+
+/* =========================================
+   PRINT STYLES
+   ========================================= */
+
+@media print {
+
+  nav,
+  .controls,
+  .presets,
+  .report,
+  .button,
+  footer,
+  .hint {
+    display: none !important;
+  }
+
+  body,
+  main {
+    background: white;
+    color: #111;
+  }
+
+  .lab,
+  .observations,
+  .theory {
+    padding: 18px;
+    background: white;
+    border: 0;
+  }
+
+  .lab-grid,
+  .analysis article,
+  .table-card {
+    border: 1px solid #bbb;
+    background: white;
+  }
+
+  .experiment {
+    height: 220px;
+  }
+
+  .analysis {
+    grid-template-columns: 1fr;
+  }
+
+  .graph {
+    height: 160px;
+  }
+
+  .theory-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  h1,
+  h2,
+  h3,
+  p,
+  td,
+  th {
+    color: #111 !important;
+  }
+}
